@@ -1,8 +1,19 @@
-#Projeto de cotações
+# Projeto de cotações
 
-#Para executar, configure as dependências
+# Para executar, configure as dependências
 `npm i`
 
-#Para inicializar
+# Para inicializar
 
 `npm start`
+
+<!-- ssh -T git@github.com
+git init
+git add
+git  commit -m "primeiro commit"
+git remote add origin git@github.com:....endereco....
+git push -u origin master
+
+git add
+git commit -m "novo commit" 
+git push ú origin master-->
