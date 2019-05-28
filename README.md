@@ -16,4 +16,8 @@ git push -u origin master
 
 git add
 git commit -m "novo commit" 
-git push ú origin master-->
+git push -u origin master
+
+heroku keys:add
+heroku create cotacoes
+-->
