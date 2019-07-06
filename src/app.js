@@ -20,7 +20,6 @@ app.get('', (req, res) => {
         author: 'Gabriel'
     });
 })
-
 app.get('/biblioteca', (req, res) => {
     res.render('biblioteca', {
         title: 'Universidade CPFL',
@@ -48,12 +47,39 @@ app.get('/perfil', (req, res) => {
     });
 })
 
+app.get('/perguntas', (req, res) => {
+    res.render('perguntas', {
+        title: 'perguntas',
+        author: 'Hackathon Team'
+    });
+})
+
+
 app.get('*', (req,res) => {
     res.render('404', {
         title: '404',
         author: 'Hackathon Team'
     });
 })
+
+
+// app.get(‘/dalembert’, callD_alembert);
+// function callD_alembert(req, res) {
+//   // using spawn instead of exec, prefer a stream over a buffer
+//   // to avoid maxBuffer issue
+//   var spawn = require(“child_process”).spawn;
+//   var process = spawn(‘python’, [“./machine_learning.py”,
+//     req.query.funds, // starting funds
+//     req.query.size, // (initial) wager size
+//     req.query.count, // wager count — number of wagers per sim
+//     req.query.sims // number of simulations
+//   ]);
+//   process.stdout.on(‘data’, function (data) {
+//     res.send(data.toString());
+//   });
+// }
+
+console.log('a')
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {

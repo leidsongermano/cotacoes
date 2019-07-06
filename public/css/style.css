@@ -33,3 +33,8 @@ body {
 .image-back {
     background-color: #cccccc;
 }
+
+.login-box {
+    margin-left: 400px;
+    width:250px;
+}
