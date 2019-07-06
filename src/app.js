@@ -21,6 +21,13 @@ app.get('', (req, res) => {
     });
 })
 
+app.get('/biblioteca', (req, res) => {
+    res.render('biblioteca', {
+        title: 'Universidade CPFL',
+        author: 'Gabriel'
+    });
+})
+
 app.get('/home', (req, res) => { 
     res.render('home', {
         title: 'Universidade CPFL'

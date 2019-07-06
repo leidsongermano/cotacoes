@@ -20,21 +20,21 @@
         crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
         crossorigin="anonymous"></script>
-        <link href="/public/css/style.css" rel="stylesheet">
+        {{!-- <link href="/public/css/style.css" rel="stylesheet"> --}}
     </head>
-    <body background = "/public/img/fundo01.jpeg">
+    <body class ="image-back">
         <div class="w-25 p-3 h-25 login-box">
         <form action="/action_page.php" class="was-validated">
             <div class="form-group">
-            <label for="uname">Usuário:</label>
+            <label for="uname" style="color: white">Usuário:</label>
             <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
             <div class="valid-feedback">Válido.</div>
             <div class="invalid-feedback">Entre o Usuário.</div>
             </div>
             <div class="form-group">
-            <label for="pwd">Senha:</label>
+            <label for="pwd" style="color: white">Senha:</label>
             <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-            <div class="valid-feedback">Válido.</div>
+            <div class="valid-feedback" style="color: red">Válido.</div>
             <div class="invalid-feedback">Entre a Senha.</div>
             </div>
             <div class="form-group form-check">
