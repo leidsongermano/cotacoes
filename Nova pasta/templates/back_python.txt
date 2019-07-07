@@ -1,0 +1,20 @@
+import pickle
+import pandas as pd
+import numpy as np
+
+df = pd.read_excel('Dados_historicos.xlsx')
+df.set_index('User', inplace = True)
+
+models = {'model.m':{'scaler':pickle.load(open('','rb')),
+               'cluster':pickle.load(open('','rb'))}}
+
+def out_pred(x, model):
+    entrada = [x[0], x[1], x[2]]
+    scaled_data = models['model.m']['scaler'].transform([entrada])
+    Output_Pred = models['model.m']['cluster'].predict(scaled_data)
+    return Output_Pred
+
+habilidades = [Habilidade 1, Habilidade 2, Habilidade 3, Habilidade 4, Habilidade 5, Habilidade 6, Habilidade 7, Habilidade 8, Habilidade 9, Habilidade 10]
+
+df['Grupo'] = dfw[habilidades].apply(out_pred, model = models, axis = 1)
+df['Grupo'] = dfw['Grupo'].apply(float)

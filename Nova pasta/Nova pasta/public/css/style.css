@@ -1,0 +1,35 @@
+
+.login-box{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+
+.img-titulo {
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.container-img-titulo{
+    height: 15%;
+    width: 100%;
+}
+
+.color-white{
+    color: white;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: block;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.image-back {
+    background-color: #cccccc;
+}

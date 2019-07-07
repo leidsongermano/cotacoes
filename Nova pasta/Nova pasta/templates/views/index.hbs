@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="content-language" content="pt-br">
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, srhink-to-fit=no">
+
+        <title>Universidae CPFL</title>
+        <link rel='icon' href="img/favicon.ico">
+
+        <!--Importando Bootstrap CSS-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--Importando JS Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+        crossorigin="anonymous"></script>
+        {{!-- <link href="/public/css/style.css" rel="stylesheet"> --}}
+    </head>
+    <body class ="image-back">
+        <div class="w-25 p-3 h-25 login-box">
+        <form action="/action_page.php" class="was-validated">
+            <div class="form-group">
+            <label for="uname" style="color: white">Usuário:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+            <div class="valid-feedback">Válido.</div>
+            <div class="invalid-feedback">Entre o Usuário.</div>
+            </div>
+            <div class="form-group">
+            <label for="pwd" style="color: white">Senha:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+            <div class="valid-feedback" style="color: red">Válido.</div>
+            <div class="invalid-feedback">Entre a Senha.</div>
+            </div>
+            <div class="form-group form-check">
+            <label class="form-check-label">
+                <input type="checkbox" name="remember" required> Lembre-me
+            </label>
+            </div>
+            <button type="submit" class="btn btn-primary" formaction="/home">Entrar</button>
+        </form>
+        <a class="dropdown-item" href="#">Novo Usuário? Cadastre-se aqui</a>
+        <a class="dropdown-item" href="#">Esqueceu a senha?</a>
+    </div>
+    </body>
+</html>
