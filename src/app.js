@@ -3,6 +3,9 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 
+const spawn = require("child_process").spawn;
+const pythonProcess = spawn('python',["/public/py/machine_learning.py", 0,1,1]);
+
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname,'../templates/views');
 const partialsPath = path.join(__dirname,'../templates/partials');
@@ -10,7 +13,6 @@ const partialsPath = path.join(__dirname,'../templates/partials');
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 hbs.registerPartials(partialsPath);
-
 
 app.use(express.static(publicDirectoryPath));
 
@@ -20,6 +22,7 @@ app.get('', (req, res) => {
         author: 'Gabriel'
     });
 })
+
 app.get('/biblioteca', (req, res) => {
     res.render('biblioteca', {
         title: 'Universidade CPFL',
@@ -62,24 +65,12 @@ app.get('*', (req,res) => {
     });
 })
 
+// app.get('/machine_learning', (req,res) => {
+//     pythonProcess.stdout.on('data', (data) => {
+//         console.log(data)
+//     });
+// })
 
-// app.get(‘/dalembert’, callD_alembert);
-// function callD_alembert(req, res) {
-//   // using spawn instead of exec, prefer a stream over a buffer
-//   // to avoid maxBuffer issue
-//   var spawn = require(“child_process”).spawn;
-//   var process = spawn(‘python’, [“./machine_learning.py”,
-//     req.query.funds, // starting funds
-//     req.query.size, // (initial) wager size
-//     req.query.count, // wager count — number of wagers per sim
-//     req.query.sims // number of simulations
-//   ]);
-//   process.stdout.on(‘data’, function (data) {
-//     res.send(data.toString());
-//   });
-// }
-
-console.log('a')
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
